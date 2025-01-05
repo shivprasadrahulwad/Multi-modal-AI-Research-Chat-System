@@ -7,7 +7,7 @@
 # Try It Now!
 Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
 
-## Experience the power of M.A.R.S - your ultimate AI assistant, like a chatbot on steroids!
+## Experience the power of M.A.R.S - your ultimate AI assistant, like a chatbot on steroids
 
 ## Introduction
 M.A.R.S (Multi-modal AI Research System) is an innovative platform designed to revolutionize information access by seamlessly integrating various artificial intelligence technologies. Developed by Sahil Bhoite, this project aims to provide users with comprehensive capabilities for extracting, analyzing, and interpreting data from a wide range of file formats.
