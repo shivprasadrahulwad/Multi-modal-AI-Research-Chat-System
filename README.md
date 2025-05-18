@@ -1,7 +1,5 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
-
-
 [*M.A.R.S demonstration video*](https://github.com/user-attachments/assets/f6ef7dda-727a-4e59-b5b3-656f49d1c3f3)
 
 # Try It Now
@@ -14,6 +12,7 @@ M.A.R.S. (Multi-modal AI Research System) is an innovative platform designed to 
 
 ## Key Features
 - **Intelligent File Extraction:** M.A.R.S employs advanced AI algorithms to extract key information from diverse file types, including PDFs, audio files, images, code snippets, and more.
+- **Retrieval Augmented Generation (RAG):** M.A.R.S leverages cutting-edge RAG technology to enhance AI responses with real-time information retrieval from your documents, providing more accurate and contextually relevant answers.
 - **User-Friendly Interface:** With its intuitive interface, M.A.R.S ensures a seamless user experience, allowing individuals to navigate through files, analyze content, and perform tasks with ease.
 - **Versatile Functionality:** From querying file contents and conducting data analysis to generating commands and creating presentations, M.A.R.S offers a myriad of functionalities to meet the diverse needs of its users.
 - **Cutting-Edge AI Technologies:** Powered by state-of-the-art AI technologies, including natural language processing (NLP), optical character recognition (OCR), and speech recognition, M.A.R.S delivers accurate results and enhances productivity.
@@ -69,8 +68,31 @@ M.A.R.S supports a wide range of file types, including:
 - **Code Generation:** Automatically generating code snippets based on user requirements or specifications.
 - **Web Scraping:** Extracting information from web pages for data collection or analysis.
 
+## RAG (Retrieval Augmented Generation)
+M.A.R.S now features powerful Retrieval Augmented Generation capabilities, enhancing the system's ability to provide accurate and contextually relevant information:
+
+### RAG Features
+- **Smart Document Retrieval:** M.A.R.S indexes your documents to create vector embeddings, enabling intelligent semantic search and retrieval.
+- **Context-Aware Responses:** By retrieving relevant information from your uploaded documents, M.A.R.S generates responses that are grounded in your specific context.
+- **Knowledge Base Integration:** Create your own knowledge base by uploading documents, which M.A.R.S will reference when answering your queries.
+- **Reduced Hallucinations:** RAG significantly improves response accuracy by basing answers on actual document content rather than model memory.
+- **Up-to-date Information:** Access information contained within your most recent documents, regardless of when they were created.
+
+### How RAG Works in M.A.R.S
+1. **Document Processing:** When you upload documents, M.A.R.S processes and chunks them into manageable pieces.
+2. **Vector Embedding:** Each chunk is converted into vector embeddings using advanced embedding models.
+3. **Similarity Search:** When you ask a question, M.A.R.S searches for the most relevant document chunks based on semantic similarity.
+4. **Contextual Response Generation:** The retrieved document chunks are used as context for the AI model to generate accurate, informative responses.
+
+### RAG Use Cases
+- **Technical Documentation:** Query complex technical documents and receive precise answers.
+- **Legal Document Analysis:** Extract specific clauses or information from legal documents.
+- **Research Paper Exploration:** Efficiently extract insights from academic papers.
+- **Company Knowledge Base:** Build an organizational knowledge repository for easy information access.
+- **Educational Material:** Create interactive learning experiences based on course materials.
+
 ## Conclusion
-With its comprehensive set of features and cutting-edge AI technologies, M.A.R.S empowers users to unlock the full potential of their data and streamline their workflows. Whether it's extracting insights from documents, analyzing code, or transcribing audio, M.A.R.S offers unparalleled capabilities for information access and analysis.
+With its comprehensive set of features and cutting-edge AI technologies including RAG, M.A.R.S empowers users to unlock the full potential of their data and streamline their workflows. Whether it's extracting insights from documents, analyzing code, transcribing audio, or finding specific information within a large document corpus, M.A.R.S offers unparalleled capabilities for information access and analysis.
 
 ## Getting Started
 To get started with M.A.R.S, follow these steps:
@@ -78,6 +100,12 @@ To get started with M.A.R.S, follow these steps:
 2. Install the required dependencies using `pip install -r requirements.txt`.
 3. You can get your Google API key [here](https://ai.google.dev/tutorials/setup). Run the `mars.py` file to launch the application.
 4. Upload your files and start exploring the various functionalities offered by M.A.R.S.
+
+## RAG Setup (Additional Steps)
+To enable RAG capabilities:
+1. Install the vector database dependencies with `pip install faiss-cpu` (or `faiss-gpu` for GPU support).
+2. Configure your embedding model by setting the `EMBEDDING_MODEL` environment variable or updating the config file.
+3. Ensure you have sufficient storage for the vector database, which will grow as you add more documents.
 
 ## Feedback and Contributions
 Your feedback is valuable in improving M.A.R.S and making it even more useful for users. If you encounter any issues or have suggestions for improvement, please don't hesitate to open an issue or submit a pull request on GitHub.
