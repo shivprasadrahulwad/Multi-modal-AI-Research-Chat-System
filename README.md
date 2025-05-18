@@ -1,4 +1,4 @@
-# M.A.R.S (Multi-modal AI Research System) 
+# Multi-modal AI Research Chat System 
 
 [*M.A.R.S demonstration video*](https://github.com/user-attachments/assets/f6ef7dda-727a-4e59-b5b3-656f49d1c3f3)
 
