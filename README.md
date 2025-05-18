@@ -8,7 +8,7 @@ Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m
 ## Experience the power of M.A.R.S - your ultimate AI assistant, like a chatbot on steroids
 
 ## Introduction
-M.A.R.S. (Multi-modal AI Research Chat System) is an innovative platform designed to revolutionize information access by seamlessly integrating various artificial intelligence technologies. Developed by Sahil Bhoite, this project aims to provide users with comprehensive capabilities for extracting, analyzing, and interpreting data from a wide range of file formats.
+M.A.R.S. (Multi-modal AI Research Chat System) is an innovative platform designed to revolutionize information access by seamlessly integrating various artificial intelligence technologies.This project aims to provide users with comprehensive capabilities for extracting, analyzing, and interpreting data from a wide range of file formats.
 
 ## Key Features
 - **Intelligent File Extraction:** M.A.R.S employs advanced AI algorithms to extract key information from diverse file types, including PDFs, audio files, images, code snippets, and more.
