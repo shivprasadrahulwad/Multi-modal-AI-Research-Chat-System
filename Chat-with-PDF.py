@@ -23,15 +23,29 @@ def get_text_chunks(text):
     return text_splitter.split_text(text)
 
 def get_vector_store(text_chunks, use_ollama):
-    embeddings = OllamaEmbeddings(model="llama2") if use_ollama else GooglePalmEmbeddings()
+    if use_ollama:
+        embeddings = OllamaEmbeddings(model="llama2")
+    else:
+        embeddings = GooglePalmEmbeddings(
+            api_key=os.environ['GOOGLE_API_KEY'],
+            model="gemini-2.0-flash"
+        )
     return FAISS.from_texts(text_chunks, embedding=embeddings)
 
+
 def get_conversation_chain(vector_store, use_ollama):
-    llm = ChatOllama(model="llama2") if use_ollama else GooglePalm()
+    if use_ollama:
+        llm = ChatOllama(model="llama2")
+    else:
+        llm = GooglePalm(
+            api_key=os.environ['GOOGLE_API_KEY'],
+            model="gemini-2.0-flash"
+        )
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
     return ConversationalRetrievalChain.from_llm(
         llm=llm, retriever=vector_store.as_retriever(), memory=memory
     )
+
 
 def main():
     st.set_page_config(page_title="Chat with PDF", layout="wide")

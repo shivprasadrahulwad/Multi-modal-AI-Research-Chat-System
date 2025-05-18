@@ -1,4 +1,4 @@
-# M.A.R.S (Multi-modal AI Research System) by Sahil Bhoite
+# Multi-modal AI Research System by Shivprasad Rahulwad
 import streamlit as st
 import os
 import io
